@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--This configuration file will be only used during Device Provisioning of Mobile Devices downloaded from Susbsystem DPT-->
+<DeviceConfig>
+  <Config>
+    <PostProcessingVisibleTimeOut>10</PostProcessingVisibleTimeOut>
+    <FeaturesSupported>0</FeaturesSupported>  <!--			PAYMENT_QUERY_REVERSAL_ENABLED=3;PAYMENT_QUERY_ENABLED=2;PAYMENT_REVERSAL_ENABLED=1;PAYMENT_ENABLED=0; -->
+  </Config>
+</DeviceConfig>
