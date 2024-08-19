@@ -721,10 +721,9 @@
       <ShortStationId>113</ShortStationId>
     </Station>
     <Station>
-      <StationName>madurai</StationName>
+      <StationName>mad</StationName>
       <StationDesc>Community Bus 407</StationDesc>
       <StationId>20014</StationId>
-      <ShortStationName>ms</ShortStationName>
       <ShortStationId>114</ShortStationId>
     </Station>
   </Stations>
