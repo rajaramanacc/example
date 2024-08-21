@@ -1,0 +1,730 @@
+<DeviceConfig Version="127">
+  <Config>
+    <LastUpdatedTimeConfig>63846540472398</LastUpdatedTimeConfig>
+    <SystemPref>
+      <V2FextUpdateFix>1</V2FextUpdateFix>
+      <Memorylimit>0.048828125</Memorylimit>
+      <Batterylimit>0.1</Batterylimit>
+      <SAMType>1</SAMType>
+      <HostAuthKey>01020304010203040102030401020304</HostAuthKey>
+      <PasswordExpiryPeriod>15</PasswordExpiryPeriod>
+      <LoginSessionExpiryNotification>3000</LoginSessionExpiryNotification>
+      <ErrorNotificationDisplayWindow>3000</ErrorNotificationDisplayWindow>
+      <ScreenTimeOut>120</ScreenTimeOut>
+      <ScreenTimeOutExpiry>180</ScreenTimeOutExpiry>
+      <FeaturesSupported>3</FeaturesSupported>
+      <!--PAYMENT_QUERY_REVERSAL_ENABLED=3;PAYMENT_QUERY_ENABLED=2;PAYMENT_REVERSAL_ENABLED=1;PAYMENT_ENABLED=0;-->
+      <LUMDetectionEnabled>1</LUMDetectionEnabled>
+      <PolicySyncTime>11:00</PolicySyncTime>
+      <LUMAuthEnabled>1</LUMAuthEnabled>
+      <OPCONFIGURATION_PROVISION_STATUS>1</OPCONFIGURATION_PROVISION_STATUS>
+      <TransactionDBUploadBatchSize>1000</TransactionDBUploadBatchSize>
+    </SystemPref>
+    <OPSystemPref>
+      <SaltKey>48C456DSDFDFSDDIEUIOEUI67</SaltKey>
+    </OPSystemPref>
+    <TransactionSyncParams>
+      <TransactionSyncUsername>syncuser</TransactionSyncUsername>
+      <TransactionModel>TransactionSyncModel</TransactionModel>
+      <TransactionSyncFrequency>15</TransactionSyncFrequency>
+      <TrxDEDSyncFrequency>60</TrxDEDSyncFrequency>
+      <TransactionPath>DB Path</TransactionPath>
+    </TransactionSyncParams>
+    <HotlistSyncParams>
+      <HLSyncUsername>syncuser</HLSyncUsername>
+      <HLModel>HHPoSHotList</HLModel>
+      <HLPath>DB Path</HLPath>
+    </HotlistSyncParams>
+    <UserDBSyncParams>
+      <UDSyncUsername>syncuser</UDSyncUsername>
+      <UDEncryptionSalt>410E422CE5</UDEncryptionSalt>
+      <UDModel>SPUserSyncModel</UDModel>
+      <UDPath>DB Path</UDPath>
+    </UserDBSyncParams>
+    <RelayServerParams>
+      <RSEnabled>1</RSEnabled>
+      <HttpsEnabled>1</HttpsEnabled>
+      <RSHost>172.29.1.49</RSHost>
+      <RSPort>443</RSPort>
+      <RSMutual>1</RSMutual>
+      <RSFarmTEUrlSuffix>/rs17/Client/rs.dll/TransactioneventFarm</RSFarmTEUrlSuffix>
+      <RSFarmUDUrlSuffix>/rs17/Client/rs_client.dll/SPUserServerFarm</RSFarmUDUrlSuffix>
+      <RSFarmHLUrlSuffix>/rs17/Client/rs.dll/HHPOSHotlistServerFarm</RSFarmHLUrlSuffix>
+      <TrustedRoot>root.cer</TrustedRoot>
+      <ExtraParams>id_p=acc1234$$;id=ClientCert.pem;wb_p=acc1234$$;wb=ClientCert.pfx</ExtraParams>
+    </RelayServerParams>
+    <RTAParams>
+      <RTAHost>172.29.1.49</RTAHost>
+      <RTAPort>8088</RTAPort>
+      <RTASalt>83676A17</RTASalt>
+      <RTAUrlSuffix>/CardMasterService.svc/json/GetMediaWithTxHistoryCountRest?ChannelId=0&amp;txHistoryItemsCount=1</RTAUrlSuffix>
+      <RTAHTTPSEnabled>0</RTAHTTPSEnabled>
+    </RTAParams>
+    <CertificateService>
+      <Enable>1</Enable>
+      <CERSHost>144.36.207.250</CERSHost>
+      <CERSHttpsEnabled>1</CERSHttpsEnabled>
+      <CERSPort>443</CERSPort>
+      <CERSUrlSuffix>/CertificateAutomationService_AZPAT02/CertificateAutomation.svc/ca</CERSUrlSuffix>
+    </CertificateService>
+    <WebServices>
+      <TransactionSyncParams>
+        <TransactionSyncFrequency>3</TransactionSyncFrequency>
+        <OfflineTransactionSyncFrequency>40</OfflineTransactionSyncFrequency>
+        <TrxDEDSyncFrequency>60</TrxDEDSyncFrequency>
+        <CLTrxDEDSyncURL>https://172.29.1.49/TransactionSync/api/ClosedLoopSync/sync</CLTrxDEDSyncURL>
+        <DEDTrxDEDSyncURL>https://172.29.1.49/TransactionSync/api/DeviceEventSync/sync</DEDTrxDEDSyncURL>
+        <TapEventSyncURL>https://172.29.1.49/TransactionSync/api/TapEventService/sync</TapEventSyncURL>
+        <!--5.1-->
+      </TransactionSyncParams>
+      <RemoteListRestAPI>
+        <FullDBListSyncURL>https://172.29.1.49/ListDBFullSyncService/Lists</FullDBListSyncURL>
+        <CLHotList>https://172.29.1.49/DataSyncService/api/CLHotList/{1}/{2}/{3}/{4}</CLHotList>
+        <CLLoadValueList>https://172.29.1.49/DataSyncService/api/LoadValueList/{1}/{2}/{3}/{4}</CLLoadValueList>
+        <OLHotList>https://172.29.1.49/DataSyncService/api/OLHotList/{1}/{2}/{3}/{4}</OLHotList>
+        <CLActionList>https://172.29.1.49/DataSyncService/api/ActionList/{1}/{2}/{3}/{4}</CLActionList>
+        <OLWhiteList>https://172.29.1.49/WhiteListService/api/WhiteList/{1}/{2}/{3}/{4}</OLWhiteList>
+        <CLHotListACK>https://172.29.1.49/DataSyncService/api/CLHotList/{1}/{2}/{3}</CLHotListACK>
+        <CLLoadValueListACK>https://172.29.1.49/DataSyncService/api/LoadValueList/{1}/{2}/{3}</CLLoadValueListACK>
+        <OLHotListACK>https://172.29.1.49/DataSyncService/api/OLHotList/{1}/{2}/{3}</OLHotListACK>
+        <CLActionListACK>https://172.29.1.49/DataSyncService/api/ActionList/{1}/{2}/{3}</CLActionListACK>
+        <OLWhiteListACK>https://172.29.1.49/WhiteListService/api/WhiteList/{1}/{2}/{3}</OLWhiteListACK>
+        <OPDenyList>https://172.29.1.49/DataSyncService/api/OPDenyList/{1}/{2}/{3}/{4}</OPDenyList>
+        <VCDenyList>https://172.29.1.49/DataSyncService/api/VCDenyList/{1}/{2}/{3}/{4}</VCDenyList>
+        <!-- 3.9 (905Tech) -->
+        <OPDenyListACK>https://172.29.1.49/DataSyncService/api/OPDenyList/{1}/{2}/{3}</OPDenyListACK>
+        <VCDenyListACK>https://172.29.1.49/DataSyncService/api/VCDenyList/{1}/{2}/{3}</VCDenyListACK>
+        <!-- 3.9 (905Tech) -->
+      </RemoteListRestAPI>
+      <UserDBSyncParams>
+        <UserDBFullSyncURL>https://172.29.1.49/UserManagementSync/api/UserManagementSync/{DeviceTypeID}/{SPID}/{LogicalDeviceID}</UserDBFullSyncURL>
+        <UserDBDeltaSyncURL>https://172.29.1.49/UserManagementSync/api/UserManagementSync/{DeviceTypeID}/{SPID}/{LogicalDeviceID}/{LastSyncTime}</UserDBDeltaSyncURL>
+        <UDEncryptionSalt>410E422CE5</UDEncryptionSalt>
+      </UserDBSyncParams>
+      <CREDBSyncParams>
+        <CREDBSyncURL>https://172.29.1.49/PDSCRESyncService/CRE</CREDBSyncURL>
+      </CREDBSyncParams>
+      <TicketingKeyExchangeService>
+        <TKESHost>144.36.189.118</TKESHost>
+        <TKESHttpsEnabled>1</TKESHttpsEnabled>
+        <TKESPort>443</TKESPort>
+        <TKESUrlSuffix>/SS_DEV03/TicketingKeyExchangeService_MWIOS/Service.asmx</TKESUrlSuffix>
+      </TicketingKeyExchangeService>
+      <UserManagementService>
+        <UMSHttpsEnabled>1</UMSHttpsEnabled>
+        <UMSHost>172.29.1.49</UMSHost>
+        <UMSPort>443</UMSPort>
+        <UMSUrlSuffix>/UserManagementService/UserManagement.svc/DP</UMSUrlSuffix>
+      </UserManagementService>
+      <DeviceProvisioningService>
+        <DPSHost>172.29.1.49</DPSHost>
+        <DPSPort>8088</DPSPort>
+        <DPSHttpsEnabled>0</DPSHttpsEnabled>
+        <DPSUrlSuffix>/DeviceProvisioningService/DeviceParameters.svc/DP</DPSUrlSuffix>
+      </DeviceProvisioningService>
+      <TopologyEODService>
+        <TESHost>172.29.1.49</TESHost>
+        <TESPort>8088</TESPort>
+        <TESHttpsEnabled>0</TESHttpsEnabled>
+        <TESUrlSuffix>/TopologyEODService/TopologyService.svc</TESUrlSuffix>
+      </TopologyEODService>
+      <EODProcessorService>
+        <TESHost>172.29.1.49</TESHost>
+        <TESPort>443</TESPort>
+        <TESHttpsEnabled>1</TESHttpsEnabled>
+        <TESUrlSuffixPOSEODVersion>/EODProcessorService/api/EOD/GetMasterMFTPEODVersion/{spid}</TESUrlSuffixPOSEODVersion>
+        <TESUrlSuffixEODDownload>/EODProcessorService/api/EOD/GetEODFiles/{spid}/{EODType}/{VersionNumber}/{DeviceTypeID}</TESUrlSuffixEODDownload>
+      </EODProcessorService>
+      <RouteTripDBSyncParams>
+        <RouteTripDBSyncURL>https://172.29.1.49/RouteTripDownloadService/RouteTrip/TTC/</RouteTripDBSyncURL>
+      </RouteTripDBSyncParams>
+      <ReaderFirmwareUpgradeParams>
+        <ReaderFirmwareUpgradeURL>https://172.29.1.49/ReaderFirmwareUpgrade/api/values/{parameter1}/{parameter2}/{parameter3}</ReaderFirmwareUpgradeURL>
+      </ReaderFirmwareUpgradeParams>
+      <ReaderConfigRestAPI>
+        <ReaderConfigHost>https://172.29.1.49</ReaderConfigHost>
+        <ReaderConfigUrlSuffix>/ReaderConfigurationFileSyncService/Files</ReaderConfigUrlSuffix>
+        <OpenPaymentConfigUrlSuffix>/ReaderConfigurationFileSyncService/Files/OpenPaymentConfigurations</OpenPaymentConfigUrlSuffix>
+      </ReaderConfigRestAPI>
+    </WebServices>
+    <LoggerPref>
+      <LogFilelimit>1</LogFilelimit>
+      <Loggermode>4</Loggermode>
+      <SotiLoggerMode>4</SotiLoggerMode>
+    </LoggerPref>
+  </Config>
+  <Stations>
+    <LastUpdatedTimeStations>1527595616488</LastUpdatedTimeStations>
+    <Station>
+      <StationName>One</StationName>
+      <StationDesc>One _STATION</StationDesc>
+      <StationId>5</StationId>
+      <ShortStationId>5</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>UNION</StationName>
+      <StationDesc>
+      </StationDesc>
+      <StationId>12</StationId>
+      <ShortStationId>38</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>BATH</StationName>
+      <StationDesc>BATHURST STATION</StationDesc>
+      <StationId>76</StationId>
+      <ShortStationId>1</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DAVIS</StationName>
+      <StationDesc>DAVISVILLE STATION</StationDesc>
+      <StationId>957</StationId>
+      <ShortStationId>12</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>JANE</StationName>
+      <StationDesc>JANE STATION </StationDesc>
+      <StationId>1167</StationId>
+      <ShortStationId>28</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>MAIN</StationName>
+      <StationDesc>MAIN STREET STATION</StationDesc>
+      <StationId>1258</StationId>
+      <ShortStationId>38</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>STGRG</StationName>
+      <StationDesc>ST GEORGE STATION</StationDesc>
+      <StationId>1581</StationId>
+      <ShortStationId>60</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WILSON</StationName>
+      <StationDesc>WILSON STATION</StationDesc>
+      <StationId>1652</StationId>
+      <ShortStationId>67</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>BROAD</StationName>
+      <StationDesc>BROADVIEW STATION</StationDesc>
+      <StationId>1765</StationId>
+      <ShortStationId>6</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>ISLING</StationName>
+      <StationDesc>ISLINGTON STATION</StationDesc>
+      <StationId>2708</StationId>
+      <ShortStationId>27</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>LAWR</StationName>
+      <StationDesc>LAWRENCE STATION</StationDesc>
+      <StationId>2811</StationId>
+      <ShortStationId>35</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WOODB</StationName>
+      <StationDesc>WOODBINE STATION</StationDesc>
+      <StationId>3194</StationId>
+      <ShortStationId>68</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>GRNWD</StationName>
+      <StationDesc>GREENWOOD STATION</StationDesc>
+      <StationId>3667</StationId>
+      <ShortStationId>25</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>COXWL</StationName>
+      <StationDesc>COXWELL STATION</StationDesc>
+      <StationId>4917</StationId>
+      <ShortStationId>11</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>HIGHP</StationName>
+      <StationDesc>HIGH PARK STATION</StationDesc>
+      <StationId>5122</StationId>
+      <ShortStationId>26</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>EGLINW</StationName>
+      <StationDesc>EGLINTON WEST STATION</StationDesc>
+      <StationId>6366</StationId>
+      <ShortStationId>21</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>OLDMIL</StationName>
+      <StationDesc>OLD MILL STATION</StationDesc>
+      <StationId>6423</StationId>
+      <ShortStationId>43</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>KENN</StationName>
+      <StationDesc>KENNEDY STATION</StationDesc>
+      <StationId>6480</StationId>
+      <ShortStationId>30</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>LAWRW</StationName>
+      <StationDesc>LAWRENCE WEST STATION</StationDesc>
+      <StationId>6507</StationId>
+      <ShortStationId>36</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>PAPE</StationName>
+      <StationDesc>PAPE STATION</StationDesc>
+      <StationId>6630</StationId>
+      <ShortStationId>46</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>ROSDLE</StationName>
+      <StationDesc>ROSEDALE STATION</StationDesc>
+      <StationId>6965</StationId>
+      <ShortStationId>49</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>RLYORK</StationName>
+      <StationDesc>ROYAL YORK STATION</StationDesc>
+      <StationId>6967</StationId>
+      <ShortStationId>50</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>RNMEDE</StationName>
+      <StationDesc>RUNNYMEDE STATION</StationDesc>
+      <StationId>7045</StationId>
+      <ShortStationId>51</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>SHEP</StationName>
+      <StationDesc>SHEPPARD STATION</StationDesc>
+      <StationId>7129</StationId>
+      <ShortStationId>53</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>VICPK</StationName>
+      <StationDesc>VICTORIA PARK STATION</StationDesc>
+      <StationId>7427</StationId>
+      <ShortStationId>64</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>YRKMIL</StationName>
+      <StationDesc>YORK MILLS STATION</StationDesc>
+      <StationId>7462</StationId>
+      <ShortStationId>70</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>CASTLE</StationName>
+      <StationDesc>CASTLE FRANK STATION</StationDesc>
+      <StationId>7597</StationId>
+      <ShortStationId>7</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>EGLIN</StationName>
+      <StationDesc>EGLINTON STATION</StationDesc>
+      <StationId>7671</StationId>
+      <ShortStationId>20</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>FINCH</StationName>
+      <StationDesc>FINCH STATION</StationDesc>
+      <StationId>7758</StationId>
+      <ShortStationId>23</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>KEELE</StationName>
+      <StationDesc>KEELE STATION</StationDesc>
+      <StationId>7880</StationId>
+      <ShortStationId>29</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>KIPLNG</StationName>
+      <StationDesc>KIPLING STATION</StationDesc>
+      <StationId>7906</StationId>
+      <ShortStationId>32</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>OSSIN</StationName>
+      <StationDesc>OSSINGTON STATION</StationDesc>
+      <StationId>8007</StationId>
+      <ShortStationId>45</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>SPDINA</StationName>
+      <StationDesc>SPADINA STATION</StationDesc>
+      <StationId>8115</StationId>
+      <ShortStationId>55</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>STCLR</StationName>
+      <StationDesc>ST CLAIR STATION</StationDesc>
+      <StationId>8135</StationId>
+      <ShortStationId>58</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>STCLRW</StationName>
+      <StationDesc>ST CLAIR WEST STATION</StationDesc>
+      <StationId>8193</StationId>
+      <ShortStationId>59</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WELSLY</StationName>
+      <StationDesc>WELLESLEY STATION</StationDesc>
+      <StationId>8623</StationId>
+      <ShortStationId>66</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DONLD</StationName>
+      <StationDesc>DONLANDS STATION</StationDesc>
+      <StationId>9445</StationId>
+      <ShortStationId>14</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>LAWRE</StationName>
+      <StationDesc>LAWRENCE EAST STATION</StationDesc>
+      <StationId>9542</StationId>
+      <ShortStationId>34</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>SCARB</StationName>
+      <StationDesc>SCARBOROUGH CENTRE STATION</StationDesc>
+      <StationId>9560</StationId>
+      <ShortStationId>52</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WARD</StationName>
+      <StationDesc>WARDEN STATION</StationDesc>
+      <StationId>10142</StationId>
+      <ShortStationId>65</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DUNDW</StationName>
+      <StationDesc>DUNDAS WEST STATION</StationDesc>
+      <StationId>11827</StationId>
+      <ShortStationId>18</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DOWNS</StationName>
+      <StationDesc>DOWNSVIEW STATION</StationDesc>
+      <StationId>11860</StationId>
+      <ShortStationId>15</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DONMIL</StationName>
+      <StationDesc>DON MILLS STATION</StationDesc>
+      <StationId>13682</StationId>
+      <ShortStationId>13</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>LESLIE</StationName>
+      <StationDesc>LESLIE STATION</StationDesc>
+      <StationId>13689</StationId>
+      <ShortStationId>37</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>UNION</StationName>
+      <StationDesc>UNION STATION</StationDesc>
+      <StationId>13815</StationId>
+      <ShortStationId>63</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>BLOOR</StationName>
+      <StationDesc>BLOOR STATION</StationDesc>
+      <StationId>14570</StationId>
+      <ShortStationId>5</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>STPAT</StationName>
+      <StationDesc>ST PATRICK STATION</StationDesc>
+      <StationId>14571</StationId>
+      <ShortStationId>61</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>YONGE</StationName>
+      <StationDesc>YONGE STATION</StationDesc>
+      <StationId>14572</StationId>
+      <ShortStationId>69</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>CHEST</StationName>
+      <StationDesc>CHESTER STATION</StationDesc>
+      <StationId>14573</StationId>
+      <ShortStationId>8</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>SHERB</StationName>
+      <StationDesc>SHERBOURNE STATION</StationDesc>
+      <StationId>14574</StationId>
+      <ShortStationId>54</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>LANS</StationName>
+      <StationDesc>LANSDOWNE STATION</StationDesc>
+      <StationId>14575</StationId>
+      <ShortStationId>33</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>MCCWN</StationName>
+      <StationDesc>MCCOWAN STATION</StationDesc>
+      <StationId>14576</StationId>
+      <ShortStationId>39</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>BVIEW</StationName>
+      <StationDesc>BAYVIEW STATION</StationDesc>
+      <StationId>14577</StationId>
+      <ShortStationId>3</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>BESSA</StationName>
+      <StationDesc>BESSARION STATION</StationDesc>
+      <StationId>14578</StationId>
+      <ShortStationId>4</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>BAY</StationName>
+      <StationDesc>BAY STATION</StationDesc>
+      <StationId>14579</StationId>
+      <ShortStationId>2</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>YKDALE</StationName>
+      <StationDesc>YORKDALE STATION</StationDesc>
+      <StationId>14580</StationId>
+      <ShortStationId>71</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DUPON</StationName>
+      <StationDesc>DUPONT STATION</StationDesc>
+      <StationId>14581</StationId>
+      <ShortStationId>19</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>MUSEUM</StationName>
+      <StationDesc>MUSEUM STATION</StationDesc>
+      <StationId>14582</StationId>
+      <ShortStationId>41</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>QPARK</StationName>
+      <StationDesc>QUEENS PARK STATION</StationDesc>
+      <StationId>14583</StationId>
+      <ShortStationId>48</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>OSGOOD</StationName>
+      <StationDesc>OSGOODE STATION</StationDesc>
+      <StationId>14584</StationId>
+      <ShortStationId>44</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>STANDW</StationName>
+      <StationDesc>ST ANDREW STATION</StationDesc>
+      <StationId>14585</StationId>
+      <ShortStationId>57</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>KING</StationName>
+      <StationDesc>KING STATION</StationDesc>
+      <StationId>14586</StationId>
+      <ShortStationId>31</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>QUEEN</StationName>
+      <StationDesc>QUEEN STATION</StationDesc>
+      <StationId>14587</StationId>
+      <ShortStationId>47</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DUND</StationName>
+      <StationDesc>DUNDAS STATION</StationDesc>
+      <StationId>14588</StationId>
+      <ShortStationId>17</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>COLLG</StationName>
+      <StationDesc>COLLEGE STATION</StationDesc>
+      <StationId>14589</StationId>
+      <ShortStationId>10</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>SUMHL</StationName>
+      <StationDesc>SUMMERHILL STATION</StationDesc>
+      <StationId>14590</StationId>
+      <ShortStationId>62</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>NYCTR</StationName>
+      <StationDesc>NORTH YORK CENTRE STATION</StationDesc>
+      <StationId>14591</StationId>
+      <ShortStationId>42</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>ELSMER</StationName>
+      <StationDesc>ELLESMERE STATION</StationDesc>
+      <StationId>14592</StationId>
+      <ShortStationId>22</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>GLENC</StationName>
+      <StationDesc>GLENCAIRN STATION</StationDesc>
+      <StationId>14593</StationId>
+      <ShortStationId>24</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DUFF</StationName>
+      <StationDesc>DUFFERIN STATION</StationDesc>
+      <StationId>14594</StationId>
+      <ShortStationId>16</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>CHRIS</StationName>
+      <StationDesc>CHRISTIE STATION</StationDesc>
+      <StationId>14595</StationId>
+      <ShortStationId>9</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>MDLND</StationName>
+      <StationDesc>MIDLAND STATION</StationDesc>
+      <StationId>14596</StationId>
+      <ShortStationId>40</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>SPDINA-YNG</StationName>
+      <StationDesc>SPADINA-YONGE STATION</StationDesc>
+      <StationId>14815</StationId>
+      <ShortStationId>56</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>DPARK</StationName>
+      <StationDesc>DOWNSVIEW PARK</StationDesc>
+      <StationId>15204</StationId>
+      <ShortStationId>72</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>FINCHW</StationName>
+      <StationDesc>FINCH WEST</StationDesc>
+      <StationId>15205</StationId>
+      <ShortStationId>73</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>YORKU</StationName>
+      <StationDesc>BATHURST STATION</StationDesc>
+      <StationId>15206</StationId>
+      <ShortStationId>74</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>PIONV</StationName>
+      <StationDesc>PIONEER VILLAGE</StationDesc>
+      <StationId>15207</StationId>
+      <ShortStationId>75</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>HW407</StationName>
+      <StationDesc>HIGHWAY 407</StationDesc>
+      <StationId>15208</StationId>
+      <ShortStationId>76</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>VAUGHN</StationName>
+      <StationDesc>VAUGHAN METROPOLITAN CENTRE</StationDesc>
+      <StationId>15209</StationId>
+      <ShortStationId>77</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>TTCCSC</StationName>
+      <StationDesc>TTC CUSTOMER SERVICE CENTRE</StationDesc>
+      <StationId>15210</StationId>
+      <ShortStationId>99</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>PARA</StationName>
+      <StationDesc>TTC PARA CUSTOMER</StationDesc>
+      <StationId>15211</StationId>
+      <ShortStationId>100</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>Wheel-Trans (B &amp; Z)</StationName>
+      <StationDesc>Wheel-Trans Bus</StationDesc>
+      <StationId>20001</StationId>
+      <ShortStationId>101</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-SPV</StationName>
+      <StationDesc>Wheel-Trans Bus (Mobile Supervisor)</StationDesc>
+      <StationId>20002</StationId>
+      <ShortStationId>102</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-COD</StationName>
+      <StationDesc>Contract 1</StationDesc>
+      <StationId>20003</StationId>
+      <ShortStationId>103</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-ROD</StationName>
+      <StationDesc>Contract 2</StationDesc>
+      <StationId>20004</StationId>
+      <ShortStationId>104</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-SCD</StationName>
+      <StationDesc>Contract 3</StationDesc>
+      <StationId>20005</StationId>
+      <ShortStationId>105</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-CTD</StationName>
+      <StationDesc>Contract 4</StationDesc>
+      <StationId>20006</StationId>
+      <ShortStationId>106</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-COM</StationName>
+      <StationDesc>Contract 5</StationDesc>
+      <StationId>20007</StationId>
+      <ShortStationId>107</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-BEM</StationName>
+      <StationDesc>Contract 6</StationDesc>
+      <StationId>20008</StationId>
+      <ShortStationId>108</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-CB400</StationName>
+      <StationDesc>Community Bus 400</StationDesc>
+      <StationId>20009</StationId>
+      <ShortStationId>109</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-CB402</StationName>
+      <StationDesc>Community Bus 402</StationDesc>
+      <StationId>20010</StationId>
+      <ShortStationId>110</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-CB403</StationName>
+      <StationDesc>Community Bus 403</StationDesc>
+      <StationId>20011</StationId>
+      <ShortStationId>111</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-CB404</StationName>
+      <StationDesc>Community Bus 404</StationDesc>
+      <StationId>20012</StationId>
+      <ShortStationId>112</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>WT-CB406</StationName>
+      <StationDesc>Community Bus 406</StationDesc>
+      <StationId>20013</StationId>
+      <ShortStationId>113</ShortStationId>
+    </Station>
+    <Station>
+      <StationName>madras</ssStationName>
+      <StationDesc>Community Bus 407</StationDesc>
+      <StationId>20014</StationId>	
+      <ShortStationId>114</ShortStationId>
+    </Station>
+  </Stations>
+</DeviceConfig>
