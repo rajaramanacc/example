@@ -723,6 +723,7 @@
     <Station>
       <StationName>mad</StationName>
       <StationDesc>Community Bus 407</StationDesc>
+       <ShortStationName>mad</ShortStationName>
       <StationId>20014</StationId>
       <ShortStationId>114</ShortStationId>
     </Station>
